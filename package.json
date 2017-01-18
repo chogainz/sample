@@ -1,0 +1,24 @@
+{
+  "name": "sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf app/**/*.js app/**/*.js.map",
+    "compass:w": "compass watch",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server",
+    "prestart": "npm run clean",
+    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" \"compass watch\" "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "compass": "^0.1.1",
+    "concurrently": "^3.1.0",
+    "jquery": "^3.1.1",
+    "lite-server": "^2.2.2",
+    "rimraf": "^2.5.4",
+    "typescript": "^2.1.5"
+  }
+}
